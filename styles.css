@@ -11,68 +11,51 @@ head {
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    /* background-color: #676767; */
+    background-color: lightgray;
 }
 
 /* Main app */
 .app {
-    border: 4px solid black;
-    border-radius: 1%;
-    background-color: #676767;
-
-    height: 600px;
-    width: 450px;
-}
-
-.calculator {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    height: 500px;
+    padding: 20px;
+}
 
-    padding: 2em;
-    gap: 2em;
+.calculator {
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: gray;
 }
 
 .display {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5px;
     background-color: whitesmoke;
+    text-align: right;
+    word-break: break-all;
 
-    height: 120px;
-    width: 100%;
-    padding-right: 20px;
-    padding-left: 10px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+
+    border: 1.5px solid black;
+    border-radius: 10px;
 }
 
 .current {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    padding: 20px;
-    font-size: 2em;
+    padding: 10px;
+    font-size: 3em;
 }
 
 .previous {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    padding: 20px;
-    font-size: 0.75em;
+    padding: 10px;
+    font-size: 1em;
 }
 
 .buttons {
