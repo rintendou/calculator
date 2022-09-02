@@ -8,7 +8,7 @@ const operationButtons = document.querySelectorAll('[data-operation]');
 const clearButton = document.querySelector(".clear");
 const deleteButton = document.querySelector(".delete");
 const enterButton = document.querySelector(".enter");
-const pointButton = document.querySelector(".point");
+const decimalButton = document.querySelector(".decimal");
 
 
 let firstNumber;
@@ -18,8 +18,9 @@ let answer;
 
 // Adding event listeners to all buttons
 clearButton.addEventListener('click', clearAll);
-enterButton.addEventListener('click', enter);
 deleteButton.addEventListener('click', del);
+enterButton.addEventListener('click', enter);
+decimalButton.addEventListener('click', decimal);
 
 numberButtons.forEach(button => 
     button.addEventListener('click', () => {
@@ -76,8 +77,8 @@ operationButtons.forEach(button =>
 }));
 
 
-function appendToCurrentDisplay(number) {
-    currentDisplay.textContent += number.trim();
+function appendToCurrentDisplay(buttonTextContent) {
+    currentDisplay.textContent += buttonTextContent.trim();
 }
 
 function appendToPreviousDisplay(op) {
@@ -142,6 +143,11 @@ function enter() {
             break;
     }
     return;
+}
+
+function decimal() {
+    appendToCurrentDisplay(decimalButton.textContent);
+    firstNumber = parseFloat(currentDisplay.textContent);
 }
 
 function clearAll() {
